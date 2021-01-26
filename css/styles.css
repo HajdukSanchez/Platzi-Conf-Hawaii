@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/*************************************************************\
+  Developer by Jozek Andrzej Hajduk Sánchez
+\*************************************************************/
+/*************************************************************\
+  Globals
+\*************************************************************/
+.btn-platzi {
+  background-color: #97c93e;
+  color: white;
+}
+
+.btn-platzi:hover {
+  background-color: #72ad0c;
+  color: #f8efef;
+}
+
+/*************************************************************\
+  Header
+\*************************************************************/
+header img {
+  width: 40px;
+}
+
+header .text-platzi {
+  color: #97c93e !important;
+}
+
+/*************************************************************\
+  Main
+\*************************************************************/
+main #carousel {
+  position: relative;
+}
+
+main #carousel .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+main #carousel .overlay .container, main #carousel .overlay .row {
+  height: 100%;
+}
+
+main .carousel-inner img {
+  max-height: 70vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.place-time {
+  background-color: #343a40;
+  color: white;
+}
+
+.place-time img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*************************************************************\
+  Footer
+\*************************************************************/
+footer {
+  background: -webkit-gradient(linear, left top, right top, from(#1c3643), color-stop(25%, #273b47), to(#1e5372));
+  background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #acacac;
+}

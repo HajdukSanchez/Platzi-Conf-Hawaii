@@ -1,0 +1,38 @@
+/*************************************************************\
+  Main
+\*************************************************************/
+
+main {
+  #carousel {
+    position: relative;
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, .5);
+      color: white;
+      .container, .row {
+        height: 100%;
+      }
+    }
+  }
+  .carousel-inner {
+    img {
+      max-height: 70vh;
+      object-fit: cover; // Esto arregla la imagen para que quede dentro de el conetnedor sin perder proporción, ya sea estirandola o agregandole un zoom
+      // filter: grayscale(50%); Para que se vea sombreada la imagen
+    }
+  }
+}
+
+.place-time {
+  background-color: #343a40;
+  color: white;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

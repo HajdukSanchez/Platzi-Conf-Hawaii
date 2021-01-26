@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Platzi Conf Hawaii | Curso de Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <!-- Esto le indica que va a haber un data-spy en la página web
+  Referencia al navbar
+  El valor de 66 es el alto del header que tienen que ser fixed para poder que haya un scroll spy -->
+  <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="66">
+    <header>
+      <!-- Componente de navegación en Boostrap -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="data:image/png;base64,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" alt="Platzi Logo">
+            Platzi Conf
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#conference">Conference</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#speakers">Speakers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#location">Location</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#become-speaker">Become a speaker</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-platzi" href="#" data-bs-toggle="modal" data-bs-target="#buyModal">Buy Now</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="conference">
+      <!-- Componente de carrusel en Bootstrap -->
+      <div id="carousel" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="6000">
+            <img src="https://raw.githubusercontent.com/platzi/bootstrap/gh-pages/assets/images/hawaii.jpg" class="d-block w-100" alt="Hawaii Image">
+          </div>
+          <div class="carousel-item" data-bs-interval="6000">
+            <img src="https://raw.githubusercontent.com/platzi/bootstrap/gh-pages/assets/images/hawaii2.jpg" class="d-block w-100" alt="Hawaii Image">
+          </div>
+          <div class="carousel-item" data-bs-interval="6000">
+            <img src="https://raw.githubusercontent.com/platzi/bootstrap/gh-pages/assets/images/honolulu.jpg  " class="d-block w-100" alt="Hawaii Image">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+        <!-- Overlay por encima de las imagenes -->
+        <div class="overlay">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-12 col-md-6 offset-md-6 text-center text-md-end">
+                <h1>Platzi Conf Hawaii</h1>
+                <p class="d-none d-md-block">Platzi conf for the first time in Hawaii. An event for share with our comunity, the knowledge and experience given by the future experts of internet. <br>Join Us and meet the Team Platzi members, other students and our first level speakers that we have for you..</p>
+                <a href="#" class="btn btn-outline-light">I want to be a Speaker</a>
+                <button type="submit" class="btn btn-platzi" data-bs-toggle="modal" data-bs-target="#buyModal">Buy Tickets</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <section class="speakers mt-4 mb-4" id="speakers">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center text-uppercase">
+            <small>Meet the</small>
+            <h2 class="h5">Speakers</h2>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col col-12 col-md-4 mb-4">
+            <div class="card">
+              <img src="https://github.com/platzi/bootstrap/blob/gh-pages/assets/speakers/sacha.jpg?raw=true" class="card-img-top" alt="Speaker image">
+              <div class="card-body">
+                <div class="badges mb-2">
+                  <span class="badge bg-warning text-dark p-2">JavaScript</span>
+                  <span class="badge bg-primary p-2">React</span>
+                </div>
+                <h5 class="card-title" data-bs-toggle="tooltip" data-bs-placement="left" title="Platzi speaker and teacher">Sacha Lifszyc</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">About me</a>
+              </div>
+            </div>
+          </div>
+          <div class="col col-12 col-md-4 mb-4">
+            <div class="card">
+              <img src="https://github.com/platzi/bootstrap/blob/gh-pages/assets/speakers/sacha.jpg?raw=true" class="card-img-top" alt="Speaker image">
+              <div class="card-body">
+                <div class="badges mb-2">
+                  <span class="badge bg-warning text-dark p-2">JavaScript</span>
+                  <span class="badge bg-primary p-2">React</span>
+                </div>
+                <h5 class="card-title" data-bs-toggle="tooltip" data-bs-placement="left" title="Platzi speaker and teacher">Sacha Lifszyc</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">About me</a>
+              </div>
+            </div>
+          </div>
+          <div class="col col-12 col-md-4 mb-4">
+            <div class="card">
+              <img src="https://github.com/platzi/bootstrap/blob/gh-pages/assets/speakers/sacha.jpg?raw=true" class="card-img-top" alt="Speaker image">
+              <div class="card-body">
+                <div class="badges mb-2">
+                  <span class="badge bg-warning text-dark p-2">JavaScript</span>
+                  <span class="badge bg-primary p-2">React</span>
+                </div>
+                <h5 class="card-title" data-bs-toggle="tooltip" data-bs-placement="left" title="Platzi speaker and teacher">Sacha Lifszyc</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">About me</a>
+              </div>
+            </div>
+          </div>
+          <div class="col col-12 col-md-4 mb-4">
+            <div class="card">
+              <img src="https://github.com/platzi/bootstrap/blob/gh-pages/assets/speakers/sacha.jpg?raw=true" class="card-img-top" alt="Speaker image">
+              <div class="card-body">
+                <div class="badges mb-2">
+                  <span class="badge bg-warning text-dark p-2">JavaScript</span>
+                  <span class="badge bg-primary p-2">React</span>
+                </div>
+                <h5 class="card-title" data-bs-toggle="tooltip" data-bs-placement="left" title="Platzi speaker and teacher">Sacha Lifszyc</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">About me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="place-time" id="location">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-6 ps-0 pe-0">
+            <img src="https://github.com/platzi/bootstrap/blob/gh-pages/assets/images/honolulu.jpg?raw=true" alt="PLace Image">
+          </div>
+          <div class="col-12 col-md-6 p-4">
+            <h2>Honolulu - October 2025</h2>
+            <p>Honolulu, on the island of Oahu’s south shore, is capital of Hawaii and gateway to the U.S. island chain. The Waikiki neighborhood is its center for dining, nightlife and shopping, famed for its iconic crescent beach backed by palms and high-rise hotels, with volcanic Diamond Head crater looming in the distance. Sites relating to the World War II attack on Pearl Harbor include the USS Arizona Memorial.</p>
+            <a href="https://en.wikipedia.org/wiki/Honolulu" class="btn btn-outline-light">Know more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="speaker" id="become-speaker">
+      <div class="container my-4">
+        <div class="row">
+          <div class="col-12 text-center">
+            <small class="text-uppercase">Become a</small>
+            <h2>Speaker</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center">
+            <p>Sign up as a speaker for let a
+            <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Five minutes speaks">
+              <strong><i>Ignite speak,</i></strong>
+            </span>
+            and tell us what do you want to talk.</p>
+          </div>
+        </div>
+        <form action="">
+          <div class="row my-2">
+            <div class="col-12 col-md-4 offset-md-2 mb-2">
+              <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+            </div>
+            <div class="col-12 col-md-4 mb-2">
+              <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-8 offset-md-2">
+              <textarea name="text" class="form-control form-control-lg" placeholder="What do you want to talk ?"></textarea>
+              <small class="form-text text-muted">Remember that you need to include a title for your speak</small>
+            </div>
+          </div>
+          <div class="row">
+            <div class="d-grid col-12 col-md-8 mx-auto my-3">
+              <button class="btn btn-platzi">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer id="footer" class="py-5">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-12 col-lg"><a href="#">Commond Questions</a></div>
+          <div class="col-12 col-lg"><a href="#">Contact Us</a></div>
+          <div class="col-12 col-lg"><a href="#">Press</a></div>
+          <div class="col-12 col-lg"><a href="#">Conference</a></div>
+          <div class="col-12 col-lg"><a href="#">Terms and conditions</a></div>
+          <div class="col-12 col-lg"><a href="#">Privacity</a></div>
+          <div class="col-12 col-lg"><a href="#">Students</a></div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" tabindex="-1" id="buyModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Buy tickets now</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                <div class="row">
+                  <div class="col">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon1">@</span>
+                      <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <!-- Alert -->
+              <div class="alert alert-warning" role="alert">
+                You will receive a confirmation email if you are selected
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-platzi">Buy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
